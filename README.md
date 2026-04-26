@@ -1,16 +1,196 @@
-# React + Vite
+# ✦ TutorAI — Local AI Tutor (Ollama + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TutorAI is a full-stack AI tutoring app that runs locally using Ollama.
+It helps students learn subjects like Math, Physics, CS, and more with adaptive explanations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 🎯 Subject-based learning (Math, Physics, Chemistry, etc.)
+* 📊 Level selection (Beginner → Advanced)
+* 💬 Chat-based AI tutor
+* ⚡ Fast local AI using Ollama
+* 🧠 Smart teaching-style responses
+* 🎨 Clean modern UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+* React (Vite)
+* Axios
+* CSS
+
+### Backend
+
+* Node.js
+* Express
+* Ollama API
+
+---
+
+## 📂 Project Structure
+
+```
+TutorAI/
+│
+├── backend/
+│   └── server.js
+│
+├── frontend/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── app.css
+│   └── index.css
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Install Ollama
+
+Download from: https://ollama.com
+
+Run:
+
+```
+ollama serve
+```
+
+Pull model:
+
+```
+ollama run llama3.2
+```
+
+---
+
+### 2. Backend Setup
+
+```
+cd backend
+npm install
+node server.js
+```
+
+Backend runs at:
+
+```
+http://localhost:3001
+```
+
+---
+
+### 3. Frontend Setup
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔌 API
+
+### POST /api/chat
+
+Request:
+
+```
+{
+  "messages": [{ "role": "user", "content": "Explain gravity" }],
+  "subject": "Physics",
+  "level": "Beginner"
+}
+```
+
+Response:
+
+```
+{
+  "reply": "Gravity is **a force** that attracts objects..."
+}
+```
+
+---
+
+### GET /api/health
+
+```
+{ "status": "ok" }
+```
+
+---
+
+## 🧠 How It Works
+
+1. User sends a question
+2. Backend adds a system prompt
+3. Request goes to Ollama
+4. AI responds as a tutor
+5. UI displays response
+
+---
+
+## 💡 Example Prompts
+
+* Explain derivatives
+* What is recursion?
+* Give me a practice problem
+* Explain DNA replication
+
+---
+
+## ⚠️ Common Issues
+
+### Backend not working
+
+Run:
+
+```
+node server.js
+```
+
+### Ollama not working
+
+Run:
+
+```
+ollama serve
+```
+
+### No model response
+
+Run:
+
+```
+ollama run llama3.2
+```
+
+---
+
+## ✨ Future Improvements
+
+* Voice input
+* Chat history
+* Authentication
+* Deployment
+
+---
+
+## 📜 License
+
+MIT License
