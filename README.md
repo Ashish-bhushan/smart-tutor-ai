@@ -190,7 +190,3 @@ ollama run llama3.2
 * Deployment
 
 ---
-
-## 📜 License
-
-MIT License
