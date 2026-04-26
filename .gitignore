@@ -1,0 +1,90 @@
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =========================
+# Dependency directories
+# =========================
+node_modules/
+
+# =========================
+# Build outputs
+# =========================
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Local development files
+# =========================
+*.local
+
+# =========================
+# Cache & temp files
+# =========================
+.cache/
+.parcel-cache/
+coverage/
+.tmp/
+temp/
+
+# =========================
+# Editor & IDE files
+# =========================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# VS / Windows
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Vim
+*.sw?
+*.swp
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Testing
+# =========================
+coverage/
+jest.config.js.snap
+
+# =========================
+# Misc
+# =========================
+*.tgz
+*.bak
+*.tmp
